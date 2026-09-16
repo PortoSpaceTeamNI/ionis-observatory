@@ -1,6 +1,13 @@
 # Publish IONIS with GitHub and Vercel
 
-## One-time setup
+## Live project
+
+- Website: https://ionis-observatory.vercel.app
+- Source: https://github.com/PortoSpaceTeamNI/ionis-observatory
+- Vercel: https://vercel.com/porto-space-team1/ionis-observatory
+- Production branch: main. Pushing a commit automatically starts a deployment.
+
+## One-time setup (already completed)
 
 **Approved repository visibility:** Public. The intended repository is `PortoSpaceTeamNI/ionis-observatory`. Vercel Hobby does not support private GitHub organization repositories; this public-source choice avoids that specific restriction. Select the appropriate existing Vercel account or team during import.
 
@@ -23,7 +30,7 @@
 5. Deploy and wait for **Ready**. Open the production URL and check the Earth explorer, catalog, spatial filters, and CSV export.
 6. In the Vercel project's Git settings, confirm the GitHub repository is connected and `main` is the production branch.
 
-The GitHub repository may stay private while the deployed frontend is publicly accessible, subject to the project's Vercel deployment-protection settings. Keep real mission data and secrets out of this demonstration repository until their access requirements are designed.
+This project uses the approved public GitHub repository. Keep real mission data and secrets out of this demonstration repository until their access requirements are designed.
 
 ## Routine updates
 
@@ -59,3 +66,4 @@ This publishes the working frontend and its 2,160 synthetic readings. It does no
 - [Vercel's GitHub integration](https://vercel.com/docs/git/vercel-for-github)
 - [Git deployments and production branches](https://vercel.com/docs/git)
 - [Next.js deployment](https://nextjs.org/docs/app/getting-started/deploying)
+

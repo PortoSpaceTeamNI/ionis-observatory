@@ -7,6 +7,8 @@ A complete responsive CubeSat mission frontend built with Next.js, React, TypeSc
 
 See [AUTHORS.md](AUTHORS.md) for attribution.
 
+**Live website:** https://ionis-observatory.vercel.app
+
 **Source repository:** https://github.com/PortoSpaceTeamNI/ionis-observatory
 
 ## Features
@@ -44,3 +46,4 @@ The original hosting configuration is retained for reference. The optional `site
 
 ## Next integration stage
 Replace the synthetic data module with paginated mission API queries. Add a persistent measurements database, server-side filtering and exports, certified contributor identity, provenance, review queues, and dataset licensing before opening real submissions.
+
