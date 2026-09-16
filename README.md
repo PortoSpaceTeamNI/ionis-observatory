@@ -1,6 +1,6 @@
 # IONIS — Ionosphere Observatory
 
-A complete responsive CubeSat mission frontend built with Next.js, React, TypeScript and Three.js. Prepared for GitHub-backed deployments on Vercel.
+A free ionospheric data observatory for the ICARUS project by Porto Space Team, built with Next.js, React, TypeScript and Three.js. Published through GitHub-backed Vercel deployments.
 
 **Project owner:** [Porto Space Team](https://github.com/PortoSpaceTeamNI)
 **Credits:** BOBDINHO, EduardoSilva
@@ -14,12 +14,12 @@ See [AUTHORS.md](AUTHORS.md) for attribution.
 ## Features
 - Interactive textured 3D Earth, measurement inspection, orbit tracks and layer controls.
 - Shared mission/date/orbit/density filters, coordinate-radius searches and great-circle path corridors.
-- Paginated searchable catalog, CSV and JSON exports with explicit synthetic-data provenance.
-- Contributor preview with CSV template, local validation and clear submission limitations.
+- Server-paged catalog, bounded spatial density aggregation and streaming CSV/JSON exports with explicit synthetic-data provenance.
+- Restricted contributor eligibility information: team evaluation, two-factor account access and independent dataset review. Uploads are closed.
 - Responsive desktop/mobile layout, accessible controls and optional WebMCP filtering.
 
 ## Data and production scope
-The 2,160 records, spacecraft names, orbit IDs and quality flags are synthetic demonstrations. Geographic selection uses a spherical Earth with a 6,371 km radius. Orbit trajectories illustrate sample geometry; they do not propagate mission TLEs. No production authentication, persistent measurement database, contributor certification or remote upload service is included. CSV files are validated locally and never submitted.
+The 2,160 records, spacecraft names, orbit IDs and quality flags are synthetic demonstrations. Geographic selection uses a spherical Earth with a 6,371 km radius. Orbit trajectories illustrate sample geometry; they do not propagate mission TLEs. No production authentication, persistent measurement database, contributor certification or remote upload service is included. No files can be submitted. See [ARCHITECTURE.md](ARCHITECTURE.md) for the large-data query contract, million-record aggregation test and requirements for connecting a production database and approved-contributor authentication.
 
 ## Development
 Use Node.js 22 LTS. Install dependencies with `npm ci`, then run `npm run dev` and open http://localhost:3000.
@@ -46,4 +46,3 @@ The original hosting configuration is retained for reference. The optional `site
 
 ## Next integration stage
 Replace the synthetic data module with paginated mission API queries. Add a persistent measurements database, server-side filtering and exports, certified contributor identity, provenance, review queues, and dataset licensing before opening real submissions.
-

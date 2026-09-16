@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+const origin=process.env.ARCHIVE_TEST_ORIGIN||'http://127.0.0.1:3000';
+const all=await fetch(origin+'/api/readings').then(r=>r.json());
+assert.equal(all.total,2160);assert.equal(all.rows.length,10);assert.equal(all.aggregated,true);
+const filter={missions:['IONIS-01'],orbit:'All orbits',day:'All dates',minDensity:0,query:'',page:1,view:'auto',cellSize:5,region:null};
+const url=origin+'/api/readings?filter='+encodeURIComponent(JSON.stringify(filter));
+const page=await fetch(url).then(r=>r.json());assert.equal(page.total,720);assert.equal(page.rows.length,10);assert.equal(page.aggregated,false);assert.equal(page.rows[0].id,'IP-00011');
+const csv=await fetch(url+'&format=csv').then(r=>r.text());assert.equal(csv.trim().split('\n').length,721);
+const json=await fetch(url+'&format=json').then(r=>r.json());assert.equal(json.readings.length,720);assert.equal(json.source,'synthetic_demo');
+assert.equal((await fetch(origin+'/api/readings?filter=bad')).status,400);
+assert.equal((await fetch(origin+'/api/readings?filter='+encodeURIComponent(JSON.stringify({...filter,cellSize:0})))).status,400);
+assert.equal((await fetch(origin+'/api/readings',{method:'POST',body:'unauthorized upload'})).status,405);
+console.log('Passed HTTP checks: aggregation, pagination, filtered CSV/JSON exports, invalid filters and upload rejection.');

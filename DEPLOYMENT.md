@@ -59,11 +59,10 @@ Open the failed deployment in Vercel and read its build log. A failed build does
 
 ## Current scope
 
-This publishes the working frontend and its 2,160 synthetic readings. It does not enable real uploads, researcher authentication, certification, or permanent database storage. Contributor CSV validation currently runs on the visitor's device only.
+This publishes the working frontend and its 2,160 synthetic readings. It does not enable real uploads, researcher authentication, certification, or permanent database storage. Contributor uploads are closed. The read API provides bounded density summaries, catalog pages and streaming exports from the synthetic fixture; see ARCHITECTURE.md for production integration requirements.
 
 ## Official references
 
 - [Vercel's GitHub integration](https://vercel.com/docs/git/vercel-for-github)
 - [Git deployments and production branches](https://vercel.com/docs/git)
 - [Next.js deployment](https://nextjs.org/docs/app/getting-started/deploying)
-
