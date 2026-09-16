@@ -2,7 +2,7 @@
 
 A complete responsive CubeSat mission frontend built with Next.js, React, TypeScript and Three.js. Prepared for GitHub-backed deployments on Vercel.
 
-**Project owner:** [Porto Space Team](https://github.com/PortoSpaceTeamNI)  
+**Project owner:** [Porto Space Team](https://github.com/PortoSpaceTeamNI)
 **Credits:** BOBDINHO, EduardoSilva
 
 See [AUTHORS.md](AUTHORS.md) for attribution.

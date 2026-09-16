@@ -2,9 +2,9 @@
 
 ## One-time setup
 
-**Choose repository visibility first:** Vercel Hobby cannot deploy from a private GitHub organization repository. Keep the source private with an existing Vercel Pro team, or explicitly approve making the source public before using an eligible Hobby deployment. Do not buy or upgrade a plan as part of the setup without the team's approval.
+**Approved repository visibility:** Public. The intended repository is `PortoSpaceTeamNI/ionis-observatory`. Vercel Hobby does not support private GitHub organization repositories; this public-source choice avoids that specific restriction. Select the appropriate existing Vercel account or team during import.
 
-1. Create a GitHub repository named `ionis-observatory` with the approved visibility under the **[Porto Space Team](https://github.com/PortoSpaceTeamNI)** organization (`PortoSpaceTeamNI`). Keep it empty when creating it: this project already includes its own README and Git history. Project credits are **BOBDINHO** and **EduardoSilva**.
+1. Create a **public** GitHub repository named `ionis-observatory` under the **[Porto Space Team](https://github.com/PortoSpaceTeamNI)** organization (`PortoSpaceTeamNI`). Keep it empty when creating it: this project already includes its own README and Git history. Project credits are **BOBDINHO** and **EduardoSilva**.
 2. Push the project to that repository with `main` as the production branch. Confirm that `package.json`, `package-lock.json`, `app/`, `components/`, `lib/`, and `public/` appear at the repository root. Do not upload the enclosing folder or a ZIP file as the application.
 3. In Vercel, choose **Add New → Project**, connect GitHub, and import `ionis-observatory`. Give the Vercel GitHub integration access to this repository.
 4. Use these settings:
