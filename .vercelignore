@@ -1,0 +1,10 @@
+work/
+outputs/
+dist/
+.vinext/
+.wrangler/
+.sites-runtime/
+.openai/
+.agents/
+.codex/
+*.tsbuildinfo
