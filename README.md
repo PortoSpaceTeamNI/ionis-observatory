@@ -7,6 +7,8 @@ A complete responsive CubeSat mission frontend built with Next.js, React, TypeSc
 
 See [AUTHORS.md](AUTHORS.md) for attribution.
 
+**Source repository:** https://github.com/PortoSpaceTeamNI/ionis-observatory
+
 ## Features
 - Interactive textured 3D Earth, measurement inspection, orbit tracks and layer controls.
 - Shared mission/date/orbit/density filters, coordinate-radius searches and great-circle path corridors.
